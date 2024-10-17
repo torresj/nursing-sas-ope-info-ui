@@ -8,7 +8,7 @@
     </mat-form-field>
   </form>
   @if ((members | async)?.length == 0) {
-    Nota: La búsqueda es solo por apellidos, omitir el nombre
+    <span class="note" >Nota: La búsqueda es solo por apellidos, omitir el nombre</span>
   }
   <section class="members-section">
     @for (member of (members | async); track $index) {

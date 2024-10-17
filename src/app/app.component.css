@@ -35,3 +35,8 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.note{
+    text-align: justify;
+    margin: 10px 30px;
+}
