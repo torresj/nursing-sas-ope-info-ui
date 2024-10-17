@@ -7,6 +7,9 @@
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
   </form>
+  @if ((members | async)?.length == 0) {
+    Nota: La búsqueda es solo por apellidos, omitir el nombre
+  }
   <section class="members-section">
     @for (member of (members | async); track $index) {
       <app-member [member]=member />
