@@ -9,6 +9,13 @@
   </form>
   @if ((members | async)?.length == 0) {
     <span class="note" >Nota: La búsqueda es solo por apellidos, omitir el nombre</span>
+    <section class="data-source">
+      <span>Los datos han sido obtenidos de las listas oficiales de la Junta de Andalucía:</span>
+      <ul>
+        <li><a href="https://ws027.sspa.juntadeandalucia.es/profesionales/oep_listados/listado_sup.asp?idproceso=71106&idprocesoant=&situacion=S&pageno=1&orden=ORD_TOTAL&t=L&convocatoria=5000&estado=listado&provisional=1">Listado provisional</a></li>
+        <li><a href="https://ws027.sspa.juntadeandalucia.es/profesionales/oep_listados/listado_sup.asp?idproceso=71106&idprocesoant=&situacion=S&pageno=1&orden=ORD_TOTAL&t=L&convocatoria=5000&estado=listado&provisional=0">Listado definitivo</a></li>
+      </ul>
+    </section>
   }
   <section class="members-section">
     @for (member of (members | async); track $index) {

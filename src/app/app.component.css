@@ -39,4 +39,11 @@
 .note{
     text-align: justify;
     margin: 10px 30px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.data-source{
+    margin: 30px;
+    text-align: justify;
 }
