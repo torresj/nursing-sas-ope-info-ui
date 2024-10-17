@@ -5,6 +5,6 @@ export default interface MemberInfo{
     name: string;
     surname: string;
     shift: string;
-    provisionalScore: Score;
+    provisionalScore?: Score;
     finalScore: Score;
 }

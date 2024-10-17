@@ -11,21 +11,26 @@
             </article>
             <mat-card appearance="outlined" class="score-card">
                 <mat-card-header><span class="score-name">Lista provisional</span></mat-card-header>
-                <mat-card-content>
-                    <section class="score-content">
-                        <section class="score-values">
-                            <article class="score-item">Nota opos.: {{member.provisionalScore.op}}</article>
-                            <article class="score-item">Nota conc.: {{member.provisionalScore.con}}</article>
-                            <article class="score-item">Nota total: {{member.provisionalScore.total}}</article>
+                @if (member.provisionalScore) {
+                    <mat-card-content>
+                        <section class="score-content">
+                            <section class="score-values">
+                                <article class="score-item">Nota opos.: {{member.provisionalScore.op}}</article>
+                                <article class="score-item">Nota conc.: {{member.provisionalScore.con}}</article>
+                                <article class="score-item">Nota total: {{member.provisionalScore.total}}</article>
+                            </section>
+                            <article class="pos-section">
+                                <div class="pos-prov">
+                                    <span>Posición</span>
+                                    <span>{{ member.provisionalScore.position }}</span>
+                                </div>
+                            </article>
                         </section>
-                        <article class="pos-section">
-                            <div class="pos-prov">
-                                <span>Posición</span>
-                                <span>{{ member.provisionalScore.position }}</span>
-                            </div>
-                        </article>
-                    </section>
-                </mat-card-content>
+                    </mat-card-content>
+                    } 
+                    @else {
+                        <mat-card-content>No esta en la lista</mat-card-content>
+                    }
             </mat-card>
             <mat-card appearance="outlined" class="score-card">
                 <mat-card-header><span class="score-name">Lista definitiva</span></mat-card-header>
