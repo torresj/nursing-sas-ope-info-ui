@@ -1,0 +1,50 @@
+
+<mat-card appearance="raised" class="member-card">
+    <mat-card-header><span class="name">{{ member.name }} {{ member.surname }}</span></mat-card-header>
+    <mat-card-content>
+        <section class="card-content">
+            <article class="item">
+                <article class="info-row">
+                    <span class="dni">DNI: {{ member.dni }}</span>
+                    <span>Turno: {{ member.shift }}</span>
+                </article>
+            </article>
+            <mat-card appearance="outlined" class="score-card">
+                <mat-card-header><span class="score-name">Lista provisional</span></mat-card-header>
+                <mat-card-content>
+                    <section class="score-content">
+                        <section class="score-values">
+                            <article class="score-item">Nota opos.: {{member.provisionalScore.op}}</article>
+                            <article class="score-item">Nota conc.: {{member.provisionalScore.con}}</article>
+                            <article class="score-item">Nota total: {{member.provisionalScore.total}}</article>
+                        </section>
+                        <article class="pos-section">
+                            <div class="pos-prov">
+                                <span>Posición</span>
+                                <span>{{ member.provisionalScore.position }}</span>
+                            </div>
+                        </article>
+                    </section>
+                </mat-card-content>
+            </mat-card>
+            <mat-card appearance="outlined" class="score-card">
+                <mat-card-header><span class="score-name">Lista definitiva</span></mat-card-header>
+                <mat-card-content>
+                    <section class="score-content">
+                        <section class="score-values">
+                            <article class="score-item">Nota opos.: {{member.finalScore.op}}</article>
+                            <article class="score-item">Nota conc.: {{member.finalScore.con}}</article>
+                            <article class="score-item">Nota total: {{member.finalScore.total}}</article>
+                        </section>
+                        <article class="pos-section">
+                            <div class="pos">
+                                <span>Posición</span>
+                                <span>{{ member.finalScore.position }}</span>
+                            </div>
+                        </article>
+                    </section>
+                </mat-card-content>
+            </mat-card>
+        </section>
+    </mat-card-content>
+</mat-card>
