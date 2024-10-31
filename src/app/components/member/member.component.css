@@ -4,9 +4,11 @@
 }
 
 .name{
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #7c3aed; /* Título en púrpura intenso */
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .card content{
@@ -22,18 +24,11 @@
     margin-top: 20px;
 }
 
-.score-name{
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
-.score-item{
-    font-size: 0.8em;
-}
-
 .info-row{
     display: flex;
     flex-direction: row;
+    font-size: 1.2em;
+    color: #6b7280;
 }
 
 .dni{
@@ -62,7 +57,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #008418;
+    background-color: #ec4899;
     color: white;
     padding: 10px;
     border-radius: 15px;
@@ -72,8 +67,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #946000;
+    background-color: #a78bfa;
     color: white;
     padding: 10px;
     border-radius: 15px;
 }
+
+.list-section {
+    background-color: #f5f3ff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #d8b4fe;
+}
+
+.list-title {
+    font-size: 1.1rem;
+    color: #7c3aed;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+    background-color: #e9d5ff;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 8px;
+    padding: 5px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.note-title {
+    color: #8b5cf6;
+}
+
+.note-value {
+    color: #6d28d9;
+}
+
+.position {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+.mat-mdc-card {
+    background-color: white !important; 
+    border-color: red !important;
+ }

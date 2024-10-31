@@ -115,6 +115,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
