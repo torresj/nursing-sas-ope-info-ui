@@ -11,6 +11,6 @@ export class MemberService {
   constructor(private http: HttpClient) { }
 
   getMembers$(filter: string): Observable<MemberInfo[]> {
-    return this.http.get<MemberInfo[]>(`http://localhost:8080/v1/nurses/ope?filter=${filter}`);
+    return this.http.get<MemberInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/ope?filter=${filter}`);
   }
 }
