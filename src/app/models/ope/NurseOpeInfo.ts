@@ -1,6 +1,6 @@
 import Score from "./Score";
 
-export default interface MemberInfo{
+export default interface NurseOpeInfo {
     dni: string;
     name: string;
     surname: string;

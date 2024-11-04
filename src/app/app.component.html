@@ -3,41 +3,7 @@
     <span class="title">Información de candidatos a enfermero/a del SAS</span>
     <div class="accent-bar"></div>
   </header>
-  <section class="main-content">
-    <form class="search-form">
-      <mat-form-field appearance="outline">
-        <mat-label>Buscar por apellidos</mat-label>
-        <input type="search" matInput [formControl]="searchControl">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
-    </form>
-    @if ((members | async)?.length == 0 && !(loading | async)) {
-      <div class="alert">
-        <span class="alert-text">
-            Nota: La búsqueda es solo por apellidos, omitir el nombre
-        </span>
-      </div>
-      <div class="info-section">
-        <p class="info-text">
-            Los datos han sido obtenidos de las listas oficiales de la Junta de Andalucía:
-        </p>
-        <a href="https://ws027.sspa.juntadeandalucia.es/profesionales/oep_listados/listado_sup.asp?idproceso=71106&idprocesoant=&situacion=S&pageno=1&orden=ORD_TOTAL&t=L&convocatoria=5000&estado=listado&provisional=1" class="link-button">
-            <span>Listado provisional</span>
-        </a>
-        <a href="https://ws027.sspa.juntadeandalucia.es/profesionales/oep_listados/listado_sup.asp?idproceso=71106&idprocesoant=&situacion=S&pageno=1&orden=ORD_TOTAL&t=L&convocatoria=5000&estado=listado&provisional=0" class="link-button">
-            <span>Listado definitivo</span>
-        </a>
-    </div>
-    }
-    @if (loading | async) {
-      <div class="spinner"><mat-spinner></mat-spinner>.</div>
-    }
-    <section class="members-section">
-      @for (member of (members | async); track $index) {
-        <app-member [member]=member />
-      }
-    </section>
-  </section>
+  <router-outlet></router-outlet>
 </section>
 <footer class="footer">
   <a href="mailto:jtbenavente@gmail.com">Jaime Torres</a>
