@@ -6,14 +6,14 @@ import {MatIcon} from "@angular/material/icon";
 import {MatIconButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
-import {NurseComponent} from "../nurse/nurse.component";
+import {NurseComponent} from '../../nurse/nurse.component';
 import {BehaviorSubject, debounceTime, distinctUntilChanged} from 'rxjs';
-import {NurseService} from '../../services/nurse.service';
+import NurseBolsaInfo from '../../../models/bolsa/specific/NurseBolsaInfo';
+import {NurseService} from '../../../services/nurse.service';
 import {Router} from '@angular/router';
-import NurseBolsaInfo from '../../models/bolsa/specific/NurseBolsaInfo';
 
 @Component({
-  selector: 'app-bolsa',
+  selector: 'app-family',
   standalone: true,
     imports: [
         AsyncPipe,
@@ -26,14 +26,13 @@ import NurseBolsaInfo from '../../models/bolsa/specific/NurseBolsaInfo';
         MatProgressSpinner,
         MatSuffix,
         NurseComponent,
-        ReactiveFormsModule,
-        NurseComponent
+        ReactiveFormsModule
     ],
-  templateUrl: './bolsa.component.html',
-  styleUrl: './bolsa.component.css',
+  templateUrl: './family.component.html',
+  styleUrl: './family.component.css',
   encapsulation: ViewEncapsulation.None
 })
-export class BolsaComponent implements OnInit{
+export class FamilyComponent implements OnInit{
   nurses = new BehaviorSubject<NurseBolsaInfo[]>([]);
   searchControl = new FormControl<string>("");
   loading = new BehaviorSubject<boolean>(false);
@@ -52,7 +51,7 @@ export class BolsaComponent implements OnInit{
       .subscribe((value) => {
         this.loading.next(true);
         if(value && value.trim()!=""){
-          this.nurseService.getBolsaNurses$(value).subscribe(
+          this.nurseService.getFamilyNurses$(value).subscribe(
             data => {
               this.loading.next(false);
               this.nurses.next(data);

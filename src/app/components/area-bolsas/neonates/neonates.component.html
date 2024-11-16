@@ -1,0 +1,40 @@
+<section class="main-content">
+  <section class="back-section">
+    <button class="back-button" mat-icon-button (click)="onBackClick()">
+      <mat-icon class="back-icon">arrow_back</mat-icon>
+    </button>
+    <div class="subtitle">Bolsa área de neonatología</div>
+  </section>
+  <form class="search-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Buscar por apellidos</mat-label>
+      <input type="search" matInput [formControl]="searchControl">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+  @if ((nurses | async)?.length == 0 && !(loading | async)) {
+    <div class="alert">
+      <span class="alert-text">
+          Nota: La búsqueda es solo por apellidos, omitir el nombre
+      </span>
+    </div>
+    <div class="info-section">
+      <p class="info-text">
+        Los datos han sido obtenidos de las listas oficiales de la Junta de Andalucía:
+      </p>
+      <a href="https://ws027.sspa.juntadeandalucia.es/profesionales/personaltemporal/b_listado_inscripcion.asp?id_catesp=1006&c_area_esp=011&situacion=A&provisional=1&t=L&convocatoria=2023" class="link-button">
+        <span>Baremo provisional</span>
+      </a>
+    </div>
+  }
+  @if (loading | async) {
+    <div class="spinner"><mat-spinner></mat-spinner>.</div>
+  } @else {
+    <section class="members-section">
+      @for (nurse of (nurses | async); track $index) {
+        <app-area-nurse [nurse]="nurse"/>
+      }
+    </section>
+  }
+</section>
+

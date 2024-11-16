@@ -1,6 +1,6 @@
-import {Status} from './Status';
-import ExclusionReason from './ExclusionReason';
-import Scale from './Scale';
+import {Status} from '../Status';
+import ExclusionReason from '../ExclusionReason';
+import Scale from '../Scale';
 
 export default interface NurseBolsaInfo{
   dni: string;
