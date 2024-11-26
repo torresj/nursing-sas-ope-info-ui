@@ -13,54 +13,54 @@ export class NurseService {
   constructor(private http: HttpClient) { }
 
   getOpeNurses$(filter: string): Observable<NurseOpeInfo[]> {
-    return this.http.get<NurseOpeInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/ope?filter=${filter}`);
+    return this.http.get<NurseOpeInfo[]>(`https://api.infosas.es/v1/nurses/ope?filter=${filter}`);
   }
 
   getBolsaNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa?filter=${filter}`);
   }
 
   getCriticsNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/critics?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/critics?filter=${filter}`);
   }
 
   getDialysisNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/dialysis?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/dialysis?filter=${filter}`);
   }
 
   getNuclearNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/nuclear?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/nuclear?filter=${filter}`);
   }
 
   getNeonatesNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/neonates?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/neonates?filter=${filter}`);
   }
 
   getSurgeryRoomNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/surgery?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/surgery?filter=${filter}`);
   }
 
   getMentalHealthNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
-    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/mental?filter=${filter}`);
+    return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/mental?filter=${filter}`);
   }
 
   getWorkNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/work?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/work?filter=${filter}`);
   }
 
   getMentalNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/mental/specific?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/mental/specific?filter=${filter}`);
   }
 
   getGyneNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/gyne?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/gyne?filter=${filter}`);
   }
 
   getFamilyNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/family?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/family?filter=${filter}`);
   }
 
   getPediatricianNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.sas.info.torresj.com/v1/nurses/bolsa/pediatrician?filter=${filter}`);
+    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/pediatrician?filter=${filter}`);
   }
 }
