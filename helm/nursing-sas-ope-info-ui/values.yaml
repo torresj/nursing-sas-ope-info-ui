@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: registry.torresj.com/nursing-sas-ope-info-ui
+  repository: registry.torresj.es/nursing-sas-ope-info-ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
