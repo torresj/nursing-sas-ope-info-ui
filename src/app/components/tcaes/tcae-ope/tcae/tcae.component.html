@@ -1,0 +1,65 @@
+
+<mat-card appearance="raised" class="member-card">
+  <mat-card-header><span class="name">{{ tcae.name }} {{ tcae.surname }}</span></mat-card-header>
+  <mat-card-content>
+    <section class="card-content">
+      <article class="item">
+        <article class="info-row">
+          <span class="dni">DNI: {{ tcae.dni }}</span>
+          <span>Turno: {{ tcae.shift }}</span>
+        </article>
+      </article>
+      <div class="score-card">
+        <div class="list-section">
+          <div class="list-title">Lista definitiva</div>
+          <div class="note">
+            <span class="note-title">Nota opos.:</span>
+            <span class="note-value">{{tcae.finalScore.op}}</span>
+          </div>
+          <div class="note">
+            <span class="note-title">Nota conc.:</span>
+            <span class="note-value">{{tcae.finalScore.con}}</span>
+          </div>
+          <div class="note">
+            <span class="note-title">Nota total:</span>
+            <span class="note-value">{{tcae.finalScore.total}}</span>
+          </div>
+          <div class="position">
+            <div class="pos">
+              <span>Posición</span>
+              <span>{{ tcae.finalScore.position }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="list-section">
+          <div class="list-title">Lista provisional</div>
+          @if (tcae.provisionalScore) {
+            <div class="note">
+              <span class="note-title">Nota opos.:</span>
+              <span class="note-value">{{tcae.provisionalScore.op}}</span>
+            </div>
+            <div class="note">
+              <span class="note-title">Nota conc.:</span>
+              <span class="note-value">{{tcae.provisionalScore.con}}</span>
+            </div>
+            <div class="note">
+              <span class="note-title">Nota total:</span>
+              <span class="note-value">{{tcae.provisionalScore.total}}</span>
+            </div>
+            <div class="position">
+              <div class="pos-prov">
+                <span>Posición</span>
+                <span>{{ tcae.provisionalScore.position }}</span>
+              </div>
+            </div>
+          }
+          @else {
+            <mat-card-content>No esta en la lista</mat-card-content>
+          }
+        </div>
+      </div>
+    </section>
+  </mat-card-content>
+</mat-card>

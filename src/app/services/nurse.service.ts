@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import NurseOpeInfo from '../models/ope/NurseOpeInfo';
-import NurseBolsaInfo from '../models/bolsa/specific/NurseBolsaInfo';
+import PersonnelOpeInfo from '../models/ope/PersonnelOpeInfo';
+import PersonnelBolsaInfo from '../models/PersonnelBolsaInfo';
 import AreaNurseBolsaInfo from '../models/bolsa/area/AreaNurseBolsaInfo';
 
 @Injectable({
@@ -12,12 +12,12 @@ export class NurseService {
 
   constructor(private http: HttpClient) { }
 
-  getOpeNurses$(filter: string): Observable<NurseOpeInfo[]> {
-    return this.http.get<NurseOpeInfo[]>(`https://api.infosas.es/v1/nurses/ope?filter=${filter}`);
+  getOpeNurses$(filter: string): Observable<PersonnelOpeInfo[]> {
+    return this.http.get<PersonnelOpeInfo[]>(`https://api.infosas.es/v1/nurses/ope?filter=${filter}`);
   }
 
-  getBolsaNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa?filter=${filter}`);
+  getBolsaNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa?filter=${filter}`);
   }
 
   getCriticsNurses$(filter: string): Observable<AreaNurseBolsaInfo[]> {
@@ -44,23 +44,23 @@ export class NurseService {
     return this.http.get<AreaNurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/mental?filter=${filter}`);
   }
 
-  getWorkNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/work?filter=${filter}`);
+  getWorkNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/work?filter=${filter}`);
   }
 
-  getMentalNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/mental/specific?filter=${filter}`);
+  getMentalNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/mental/specific?filter=${filter}`);
   }
 
-  getGyneNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/gyne?filter=${filter}`);
+  getGyneNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/gyne?filter=${filter}`);
   }
 
-  getFamilyNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/family?filter=${filter}`);
+  getFamilyNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/family?filter=${filter}`);
   }
 
-  getPediatricianNurses$(filter: string): Observable<NurseBolsaInfo[]> {
-    return this.http.get<NurseBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/pediatrician?filter=${filter}`);
+  getPediatricianNurses$(filter: string): Observable<PersonnelBolsaInfo[]> {
+    return this.http.get<PersonnelBolsaInfo[]>(`https://api.infosas.es/v1/nurses/bolsa/pediatrician?filter=${filter}`);
   }
 }

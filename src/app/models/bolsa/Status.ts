@@ -1,4 +1,5 @@
 export enum Status{
   ADMITIDA = "ADMITIDA",
-  EXCLUIDA = "EXCLUIDA"
+  EXCLUIDA = "EXCLUIDA",
+  NONE = "NONE"
 }

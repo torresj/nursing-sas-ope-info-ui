@@ -1,0 +1,48 @@
+.info-section {
+  background: linear-gradient(to right, #e0e7ff, #f3e8ff);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 20px;
+}
+
+.info-text {
+  color: #581c87;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  color: #6b21a8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+}
+
+.back-icon{
+  color: #db2777;
+}
+
+.back-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.back-button{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.subtitle{
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #db2777;
+  font-size: 1.2em;
+}
