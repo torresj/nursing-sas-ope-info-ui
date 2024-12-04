@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BehaviorSubject, debounceTime, distinctUntilChanged} from 'rxjs';
 import PersonnelBolsaInfo from '../../../models/PersonnelBolsaInfo';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -32,7 +32,8 @@ import {TcaeComponent} from './tcae/tcae.component';
     TcaeComponent
   ],
   templateUrl: './tcae-bolsa.component.html',
-  styleUrl: './tcae-bolsa.component.css'
+  styleUrl: './tcae-bolsa.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class TcaeBolsaComponent implements OnInit{
   tcaes = new BehaviorSubject<PersonnelBolsaInfo[]>([]);
